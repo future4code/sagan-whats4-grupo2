@@ -1,5 +1,6 @@
 import React from 'react';
 import './MensagemEu.css';
+import PropTypes from 'prop-types'
 
 class MensagemEu extends React.Component {
   constructor(props) {
@@ -19,5 +20,8 @@ class MensagemEu extends React.Component {
 }
 
 }
-
+MensagemEu.propTypes = {
+  autor: PropTypes.string,
+  msg: PropTypes.string.isRequired,   
+}
 export default MensagemEu;

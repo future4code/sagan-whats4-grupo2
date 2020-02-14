@@ -8,7 +8,12 @@ class App extends React.Component {
   constructor(props) {
     super(props)
       this.state = { 
-        arrayDeMsg: []
+        arrayDeMsg: [
+          {autor: "Eu", msg: "Oi!"},
+          {autor: "Voce", msg: "Oi! Tudo bem?"},
+          {autor: "Voce", msg: "Esta melhor?"},
+          {autor: "Eu", msg: "Estou ótimo!"},
+        ]
       }
   }
 

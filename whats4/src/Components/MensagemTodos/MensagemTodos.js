@@ -1,5 +1,6 @@
 import React from 'react';
 import './MensagemTodos.css';
+import PropTypes from 'prop-types'
 
 class MensagemTodos extends React.Component {
   constructor(props) {
@@ -22,5 +23,8 @@ class MensagemTodos extends React.Component {
 }
 
 }
-
+MensagemTodos.propTypes = {
+  autor: PropTypes.string.isRequired,
+  msg: PropTypes.string.isRequired,   
+}
 export default MensagemTodos;
