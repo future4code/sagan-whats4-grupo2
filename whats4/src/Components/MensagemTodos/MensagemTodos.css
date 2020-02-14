@@ -1,6 +1,5 @@
 .mensagem-todos {
     max-width: 40%;
-    text-align: right;
     align-self: flex-start;
     display: flex;
     flex-direction: column;

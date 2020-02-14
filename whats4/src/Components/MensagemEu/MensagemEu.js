@@ -1,8 +1,6 @@
 import React from 'react';
 import './MensagemEu.css';
 
-
-
 class MensagemEu extends React.Component {
   constructor(props) {
     super(props)
@@ -14,7 +12,7 @@ class MensagemEu extends React.Component {
    return(
     <div className="mensagem-eu">
       <div className="Mensagem-eu-mensagem">
-      {this.props.msg}
+        {this.props.msg}
       </div>
     </div>
   )
