@@ -1,0 +1,16 @@
+.mensagem-todos {
+    max-width: 40%;
+    text-align: right;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.13) 0px 1px 0.5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.Mensagem-todos-autor {
+    font-weight: bold;
+}
