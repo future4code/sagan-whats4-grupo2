@@ -20,13 +20,17 @@
     flex-direction: column;
     justify-content: flex-end;
 }
+.mensagemx {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
 
 .App {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: solid black 1pt; */
 }
 
 .teclado {
@@ -58,4 +62,10 @@
     width: 15%;
     height: 100%;
     font-weight: bold;
+}
+#digit {
+    font-style: italic;
+    position: absolute;
+    top: 0;
+    right: 45%;
 }
