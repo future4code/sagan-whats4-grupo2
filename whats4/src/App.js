@@ -145,34 +145,34 @@ mostraDigitando: false,
   }
   }
 
-  atualizaArrayDeMsg = () => {
-    const arrayDeMsgCopia = [...this.state.arrayDeMsg]
-    const arrayDeUsersCopia = [...this.state.arrayDeUsers]
-    const novaMsgAutor = document.getElementById('autor').value
-    let novaMsgMensagem = document.getElementById('msg').value
-    let novaCor = ""
-    let arrayUsersTemp = arrayDeUsersCopia.filter((i, index, array) => { return (i.usuario == document.getElementById('autor').value)})
-if ((document.getElementById('autor').value != "") && (document.getElementById('msg').value != "")) {
-  if (arrayUsersTemp.length >= 1) {
-    novaCor = arrayUsersTemp[0].color
+atualizaArrayDeMsg = () => {
+  const arrayDeMsgCopia = [...this.state.arrayDeMsg]
+  const arrayDeUsersCopia = [...this.state.arrayDeUsers]
+  const novaMsgAutor = document.getElementById('autor').value
+  let novaMsgMensagem = document.getElementById('msg').value
+  let novaCor = ""
+  let arrayUsersTemp = arrayDeUsersCopia.filter((i, index, array) => { return (i.usuario == document.getElementById('autor').value)})
+
+  if ((document.getElementById('autor').value != "") && (document.getElementById('msg').value != "")) {
+    if (arrayUsersTemp.length >= 1) {
+      novaCor = arrayUsersTemp[0].color
+
     } else {
       novaCor = this.state.arrayDeCores[arrayDeUsersCopia.length]
       arrayDeUsersCopia.push({usuario: document.getElementById('autor').value, color: novaCor})
       console.log(novaCor)
+    }
     arrayDeMsgCopia.push({msg: novaMsgMensagem, autor: novaMsgAutor, color: novaCor})
-
     this.setState({
       arrayDeMsg: arrayDeMsgCopia,
       arrayDeUsers: arrayDeUsersCopia,
       mostraDigitando: false
     })
     document.getElementById('msg').value = ""
-    }
-} else {
-alert("Você precisa digitar o Usuario e a mensagem")
-}
-
+  } else {
+    alert("Você precisa digitar o Usuario e a mensagem")
   }
+}
 
   render() {
    return(
